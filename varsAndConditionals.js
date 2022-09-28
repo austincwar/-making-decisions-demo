@@ -5,7 +5,7 @@
 */ 
 
 let jonSnowAttack = 25
-let jamieLannisterAttack =  35
+let jamieLannisterAttack =  55
 
 if (jonSnowAttack > jamieLannisterAttack)  {
     console.log("Jon Snow has better attack than Jamie Lannister")
@@ -42,3 +42,33 @@ if (jonSnowHealth <= jamieLannisterAttack - jonSnowDefense) {
     jonSnowHealth -= (jamieLannisterAttack - jonSnowDefense)   
     console.log(`Jon Snows Health is down to ${jonSnowHealth}`)
 }
+
+// villager throws jon snow a health kit, but health can't exceeed 100
+if (jonSnowHealth + 50 >= 100) {
+    jonSnowHealth = 100
+} else {
+    jonSnowHealth += 50
+}
+
+console.log('jon snow health after the heath kit is ' + jonSnowHealth)
+
+let coinLandsHands = true
+
+if (coinLandsHands) {
+    console.log("The fight continues")
+} else {
+    console.log("Jon is allowed to run away")
+}
+
+// jamie attacks jon 5 times
+for (let i = 0; i < 5; i++) {
+    jonSnowHealth -= jamieLannisterAttack - jonSnowDefense
+    console.log('jon\'s health is now ' + jonSnowHealth)
+} 
+
+// write logic in the for loop that detects if jon's health gets 0 or less, in which 
+// case, you will print that jon is dead and you will stop further loop iterations (see the "break" JS keyword for leaving a loop early)
+
+//Post-lab assingment 2
+//write the for loop (including the llogic you wrote for the first assignment) as a while loop
+// it should behave exactly the same
